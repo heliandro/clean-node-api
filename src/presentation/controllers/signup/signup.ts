@@ -5,7 +5,8 @@ import {
   HttpResponse,
   Controller,
   EmailValidator,
-  AddAccount
+  AddAccount,
+  AccountModel
 } from './signup-protocols'
 
 export class SignUpController implements Controller {
@@ -40,7 +41,7 @@ export class SignUpController implements Controller {
         return badRequest(new InvalidParamError('email'))
       }
 
-      this.addAccount.add({
+      const account: AccountModel = this.addAccount.add({
         name,
         email,
         password
@@ -48,7 +49,7 @@ export class SignUpController implements Controller {
 
       return {
         statusCode: 200,
-        body: 'sucesso!'
+        body: account
       }
     } catch (error) {
       return serverError()
