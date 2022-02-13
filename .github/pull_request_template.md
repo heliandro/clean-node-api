@@ -1,6 +1,6 @@
-# Tenho um novo PR para vocês revisarem
+## Tenho um novo PR para vocês revisarem
 
-## o que foi feito?
+o que foi feito?
 
 * texto descrevendo o que foi feito
 * idem
